@@ -12,3 +12,5 @@ with open('numbers.txt') as integers, open('even.txt', 'a') as even_int, open('o
         if num % 2 == 0:
             even_int.write(f'{str(num)}\n')
         # if odd, write to odd.txt
+        else:
+            odd_int.write(f'{str(num)}\n')
