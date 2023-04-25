@@ -3,14 +3,23 @@
 # the numbers.txt. The second text file will be named odd.txt that will contains all odd numbers extracted from the
 # numbers.txt.
 
-# open numbers.txt (read), even.txt (append), odd.txt (append)
-with open('numbers.txt') as integers, open('even.txt', 'a') as even_int, open('odd.txt', 'a') as odd_int:
-    # read numbers.txt line by line
-    for line in integers:
-        num = int(line)
-        # if even, write to even.txt
-        if num % 2 == 0:
-            even_int.write(f'{str(num)}\n')
-        # if odd, write to odd.txt
-        else:
-            odd_int.write(f'{str(num)}\n')
+class Integers:
+    def __init__(self, file):
+        self.file = file
+
+    def extract(self):
+        # open numbers.txt (read), even.txt (append), odd.txt (append)
+        with open(self.file) as integers, open('even.txt', 'a') as even_int, open('odd.txt', 'a') as odd_int:
+            # read numbers.txt line by line
+            for line in integers:
+                num = int(line)
+                # if even, write to even.txt
+                if num % 2 == 0:
+                    even_int.write(f'{str(num)}\n')
+                # if odd, write to odd.txt
+                else:
+                    odd_int.write(f'{str(num)}\n')
+
+
+to_extract = Integers('numbers.txt')
+to_extract.extract()
