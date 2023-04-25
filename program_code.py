@@ -9,4 +9,6 @@ with open('numbers.txt') as integers, open('even.txt', 'a') as even_int, open('o
     for line in integers:
         num = int(line)
         # if even, write to even.txt
+        if num % 2 == 0:
+            even_int.write(f'{str(num)}\n')
         # if odd, write to odd.txt
