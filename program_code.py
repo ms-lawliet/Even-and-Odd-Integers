@@ -2,3 +2,8 @@
 # two other text file; the first text file will be named even.txt that will contains all even numbers extracted from
 # the numbers.txt. The second text file will be named odd.txt that will contains all odd numbers extracted from the
 # numbers.txt.
+
+# open numbers.txt (read), even.txt (append), odd.txt (append)
+# read numbers.txt line by line
+# if even, write to even.txt
+# if odd, write to odd.txt
