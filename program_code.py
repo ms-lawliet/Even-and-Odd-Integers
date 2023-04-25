@@ -4,6 +4,9 @@
 # numbers.txt.
 
 # open numbers.txt (read), even.txt (append), odd.txt (append)
-# read numbers.txt line by line
-# if even, write to even.txt
-# if odd, write to odd.txt
+with open('numbers.txt') as integers, open('even.txt', 'a') as even_int, open('odd.txt', 'a') as odd_int:
+    # read numbers.txt line by line
+    for line in integers:
+        print('a')
+        # if even, write to even.txt
+        # if odd, write to odd.txt
